@@ -1,0 +1,17 @@
+.main {
+    width: 800px;
+    height: 825px;
+    background-color: #702B9D;
+    border-radius: 5px;
+    overflow-y: auto;
+
+}
+
+.main div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: row; */
+    margin: 30px;
+    flex-wrap: wrap;
+}

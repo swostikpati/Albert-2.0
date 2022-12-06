@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Inter:wght@200;300;400&family=Questrial&display=swap');
+
+/* Styling the Navbar */
+.logo {
+    cursor: pointer;
+    padding: 0;
+    width: 35px;
+    height: 40px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 5px 5%; */
+    height: auto;
+    background-color: #57068C;
+    padding: 0;
+    margin: 0;
+}
+
+/* .nav_links {
+    display: flex;
+    flex-direction: row;
+} */
+
+.nav_links li {
+    display: inline-block;
+    transition: scale 0.3s;
+    padding-top: 0px;
+    /* margin-bottom:; */
+}
+
+.nav_links li a {
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding-left: 30px;
+    transition: color 0.7s;
+
+}
+
+
+.nav_links li:hover {
+    scale: 1.08;
+    cursor: default;
+}
+
+.nav_links li a:hover {
+    color: #009B8A;
+    filter: drop-shadow(5px 5px 5px rgba(105, 105, 105, 0.807));
+}
+
+.user_icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 30px;
+    cursor: pointer;
+}

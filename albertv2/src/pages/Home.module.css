@@ -1,0 +1,9 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main div {
+    flex-direction: row;
+}
