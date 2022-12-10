@@ -4,6 +4,10 @@
     justify-content: center;
 }
 
-.main div {
+/* .main div {
     flex-direction: row;
+} */
+
+.heading {
+    margin-left: 40px;
 }

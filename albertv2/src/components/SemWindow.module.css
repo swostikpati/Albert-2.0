@@ -1,0 +1,107 @@
+/* .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+.main {
+    color: white;
+
+
+}
+
+.main h2 {
+    font-size: 30px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.main h3 {
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.main div {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main .courses {
+    background-color: white;
+    color: #8900e1;
+    width: 90%;
+    height: 500px;
+    border-radius: 3px;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+
+}
+
+.courses div {
+    border: solid 1px #8900e1;
+    padding: 20px 50px;
+    border-radius: 5px;
+    margin: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.main .buttons {
+    flex-direction: row;
+}
+
+.courses::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+.courses::-webkit-scrollbar-track {
+    background: #fff;
+    /* color of the tracking area */
+}
+
+.courses::-webkit-scrollbar-thumb {
+    background-color: #702b9d;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #fff;
+    /* creates padding around scroll thumb */
+}
+
+.buttons button {
+    margin: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* height: 30px; */
+    padding: 7px 15px;
+    border-radius: 2px;
+    border: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    transition: background-color 1s color;
+    transition: scale 0.3s;
+    font-size: 15px;
+}
+
+.buttons button:nth-of-type(1):hover {
+    background-color: aquamarine;
+    scale: 1.08;
+    cursor: pointer;
+}
+
+.buttons button:nth-of-type(2):hover {
+    background-color: #FF2400;
+    scale: 1.08;
+    cursor: pointer;
+    color: white;
+}

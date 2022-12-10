@@ -1,15 +1,40 @@
 import styles from "./Enrollment.module.css";
 import Semester from "./Semester";
+import { semDataArr } from "../helpers/semesterData.js";
+import { useState } from "react";
+import SemWindow from "./SemWindow";
 
 function Enrollment(props) {
-    return (<div className={styles.main}>
-        <div>
-            <Semester name="Fall 2021" />
-            <Semester name="Spring 2022" />
-            <Semester name="Summer 2022" />
-            <Semester name="Fall 2022" />
-        </div>
-    </div>);
+    const [semDisp, setSemDisp] = useState(true);
+    const [semName, setSemName] = useState({});
+
+
+    function selectSemester(name) {
+        console.log("Yes it works")
+        setSemDisp(false);
+        setSemName(name);
+    }
+    function showSemesters() {
+        setSemDisp(true);
+    }
+    if (semDisp) {
+        return (<div className={styles.main}>
+            <div>
+
+                {
+                    semDataArr.map((event) => {
+                        return <Semester key={event.name} name={event.name} url={event.imgUrl} selectSemester={selectSemester} />
+                    })
+                }
+            </div>
+        </div>);
+    }
+    else {
+        return (<div className={styles.main2}>
+            <SemWindow name={semName} showSemesters={showSemesters} enrollNow={props.enrollNow} />
+        </div>)
+    }
+
 }
 
 export default Enrollment;

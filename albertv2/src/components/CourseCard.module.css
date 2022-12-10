@@ -1,0 +1,16 @@
+.main div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-right: 1px solid #702B9D;
+    border-radius: 0;
+    padding: 0px 10px;
+
+
+}
+
+
+
+.main div:nth-last-child(1) {
+    border: 0;
+}

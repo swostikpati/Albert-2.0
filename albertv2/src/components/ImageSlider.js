@@ -12,7 +12,7 @@ function ImageSlider(props) {
         else {
             setCurrentI(0);
         }
-    }, 5000)
+    }, 10000)
 
     return (
         <div className={styles.main}>

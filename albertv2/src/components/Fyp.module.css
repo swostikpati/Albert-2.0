@@ -1,0 +1,51 @@
+/* .main {
+    background-color: blue;
+    height: 90%;
+    width: 90%;
+    align-items: center;
+
+}*/
+.main {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.main div {
+    margin: 15px;
+    border: 1px solid #8900e1;
+    color: #8900e1;
+    padding: 10px 10px;
+    border-radius: 3px;
+    transition: background-color 0.5s;
+}
+
+.main div:hover {
+    color: white;
+    background-color: #8900e1;
+}
+
+.main::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+.main::-webkit-scrollbar-track {
+    background: #fff;
+    /* color of the tracking area */
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-color: #702b9d;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #fff;
+    /* creates padding around scroll thumb */
+}

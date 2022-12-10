@@ -1,8 +1,23 @@
 import styles from "./Semester.module.css";
 
 function Semester(props) {
+    function semesterDisplayHandler() {
+        console.log(`${props.name} clicked!`);
+        props.selectSemester(props.name);
+    }
+    // if (props.active) {
+
+    // }
+    // else {
+    //     return (<h2>Hello</h2>)
+    // }
+
     return (
-        <div className={styles.main}>{props.name}</div>
+        <div className={styles.main} style={{ backgroundImage: `url(${props.url})` }} onClick={semesterDisplayHandler}>
+            <div className={styles.text}>
+                {props.name}
+            </div>
+        </div>
     )
 }
 
