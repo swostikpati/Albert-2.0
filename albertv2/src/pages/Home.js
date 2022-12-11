@@ -17,6 +17,15 @@ function Home() {
         setEnroll(true);
         setSemName(name);
     }
+
+    function stopEnroll() {
+        setEnroll(false);
+    }
+
+    function checkOut() {
+        setEnroll(false);
+    }
+
     if (!enroll) {
         return (
             <div> <h1 className={styles.heading}>Albert Home</h1>
@@ -39,7 +48,7 @@ function Home() {
             <div> <h1 className={styles.heading}>Albert Home</h1>
                 <section className={styles.main}>
                     {/* <div>{semName} Enrollment</div> */}
-                    <EnrollmentWindow />
+                    <EnrollmentWindow name={semName} stopEnroll={stopEnroll} checkOut={checkOut} />
                 </section>
             </div>
         )

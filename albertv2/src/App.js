@@ -14,7 +14,7 @@ function App() {
   const [BackendData, setBackendData] = useState([{}])
 
   useEffect(() => {
-    fetch("/api")
+    fetch("/api/semesters")
       .then(res => res.json())
       .then(
         data => {

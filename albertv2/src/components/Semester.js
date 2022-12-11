@@ -3,7 +3,7 @@ import styles from "./Semester.module.css";
 function Semester(props) {
     function semesterDisplayHandler() {
         console.log(`${props.name} clicked!`);
-        props.selectSemester(props.name);
+        props.selectSemester(props.name, props.num);
     }
     // if (props.active) {
 

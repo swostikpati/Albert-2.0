@@ -1,13 +1,13 @@
 import styles from "./CourseCard.module.css"
 
-function CourseCard() {
+function CourseCard(props) {
     return (
         <div className={styles.main}>
-            <div>Course Name</div>
-            <div>Professor Name</div>
-            <div>Course Time</div>
-            <div>Days</div>
-            <div>Location</div>
+            <div>{props.course.courseName}</div>
+            <div>{props.course.professorName}</div>
+            <div>{props.course.courseTime}</div>
+            <div>{props.course.days}</div>
+            <div>{props.course.location}</div>
         </div>
     )
 }

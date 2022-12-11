@@ -7,12 +7,14 @@ import SemWindow from "./SemWindow";
 function Enrollment(props) {
     const [semDisp, setSemDisp] = useState(true);
     const [semName, setSemName] = useState({});
+    const [semNum, setSemNum] = useState({});
 
 
-    function selectSemester(name) {
+    function selectSemester(name, num) {
         console.log("Yes it works")
         setSemDisp(false);
         setSemName(name);
+        setSemNum(num);
     }
     function showSemesters() {
         setSemDisp(true);
@@ -23,7 +25,7 @@ function Enrollment(props) {
 
                 {
                     semDataArr.map((event) => {
-                        return <Semester key={event.name} name={event.name} url={event.imgUrl} selectSemester={selectSemester} />
+                        return <Semester key={event.name} name={event.name} url={event.imgUrl} num={event.num} selectSemester={selectSemester} />
                     })
                 }
             </div>
@@ -31,7 +33,7 @@ function Enrollment(props) {
     }
     else {
         return (<div className={styles.main2}>
-            <SemWindow name={semName} showSemesters={showSemesters} enrollNow={props.enrollNow} />
+            <SemWindow name={semName} showSemesters={showSemesters} enrollNow={props.enrollNow} num={semNum} />
         </div>)
     }
 

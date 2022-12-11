@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Inter:wght@200;300;400&family=Questrial&display=swap');
+
+.main {
+    height: auto;
+    background-color: #CCCCFF;
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-family: "Inter";
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.main div {
+    display: flex;
+    flex-direction: row;
+}
+
+.main button {
+    margin-left: 44%;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #8900e1;
+    border-radius: 3px;
+    transition: color 0.5s, background-color 0.5s, scale 0.5s;
+}
+
+.main button:hover {
+    background-color: #8900e1;
+    border: 1px solid white;
+    color: white;
+    border-radius: 3px;
+    scale: 1.08;
+    cursor: pointer;
+}
