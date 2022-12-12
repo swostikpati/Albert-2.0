@@ -7,7 +7,7 @@ function EnrollmentWindow(props) {
     }
     function checkoutButtonHandler() {
 
-        alert("Successfully Enrolled!")
+        alert("The Enrollment functionality is under progress. It will be added soon!")
         props.checkOut()
     }
     console.log(props.backendData);
