@@ -10,14 +10,19 @@ function EnrollmentWindow(props) {
         alert("Successfully Enrolled!")
         props.checkOut()
     }
+    console.log(props.backendData);
     return (
         <div className={styles.main}>
             <h1>
                 {props.name} Enrollment
             </h1>
             <div className={styles.courseList}>
-                <CoursesBlock />
-                <CoursesBlock />
+                {props.backendData[props.num].Courses.map((course) => {
+                    return <CoursesBlock id={course.courseCode} course={course} />
+                })}
+
+                {/* <CoursesBlock />
+                <CoursesBlock /> */}
             </div>
             <div className={styles.buttons}>
                 <button onClick={checkoutButtonHandler}>Checkout</button>

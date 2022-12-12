@@ -9,13 +9,16 @@ import EnrollmentWindow from "../components/EnrollmentWindow";
 
 
 
-function Home() {
+function Home(props) {
     const [enroll, setEnroll] = useState(false);
     const [semName, setSemName] = useState({});
+    const [semNum, setSemNum] = useState({});
 
-    function enrollNow(name) {
+    function enrollNow(name, num) {
         setEnroll(true);
         setSemName(name);
+        setSemNum(num);
+
     }
 
     function stopEnroll() {
@@ -48,7 +51,7 @@ function Home() {
             <div> <h1 className={styles.heading}>Albert Home</h1>
                 <section className={styles.main}>
                     {/* <div>{semName} Enrollment</div> */}
-                    <EnrollmentWindow name={semName} stopEnroll={stopEnroll} checkOut={checkOut} />
+                    <EnrollmentWindow name={semName} num={semNum} stopEnroll={stopEnroll} checkOut={checkOut} backendData={props.backendData} />
                 </section>
             </div>
         )

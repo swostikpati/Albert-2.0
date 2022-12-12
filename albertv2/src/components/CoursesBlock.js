@@ -1,21 +1,21 @@
 import styles from "./CoursesBlock.module.css";
 
-function CoursesBlock() {
+function CoursesBlock(props) {
     return (
         <div className={styles.main}>
-            <p>Course Code: Course Name</p>
-            <p>Professor Name</p>
+            <p>{props.course.courseCode}: {props.course.courseName}</p>
+            <p>{props.course.professorName}</p>
             <div>
-                <p>ClassTime</p>
-                <p>Class Days</p>
-                <p>Class Location</p>
+                <p>{props.course.classTime}</p>
+                <p>{props.course.days}</p>
+                <p>{props.course.location}</p>
             </div>
 
             <div>
-                <p>Prequisites Fullfilled!</p>
-                <p>Class Filled</p>
+                <p>{props.course.preReqs ? "Prequisites Fullfilled!" : "Prequisites not met"}</p>
+                <p>Remaining Vacancies: {props.classFilled}/{props.classSize}</p>
             </div>
-            <p>Class description + description</p>
+            <p>{props.classDescription}</p>
             <button>Add to Cart</button>
         </div>
     )

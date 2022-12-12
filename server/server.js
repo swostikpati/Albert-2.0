@@ -54,7 +54,7 @@ function selectData() {
 
 // semesterData[0].Courses.ClassSize = 22
 function updateData() {
-    update(ref(db, "semesters/0/Courses/0/"), { ClassSize: 100 })
+    update(ref(db, "semesters/0/Courses/0/"), { classSize: 100 })
         .then(() => {
             console.log("data updated successfullly");
         })
@@ -62,7 +62,7 @@ function updateData() {
 }
 
 
-updateData();
+// updateData();
 
 
 

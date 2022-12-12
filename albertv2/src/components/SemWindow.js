@@ -8,7 +8,7 @@ function SemWindow(props) {
     }
 
     function enrollButtonHandler() {
-        props.enrollNow(props.name);
+        props.enrollNow(props.name, props.num);
     }
     return (
         <div className={styles.main}>
@@ -18,7 +18,7 @@ function SemWindow(props) {
             <div className={styles.courses}>
                 {
                     studentSemesterData[props.num].courses.map((course) => {
-                        return <CourseCard course={course} />
+                        return <CourseCard key={course.courseName} course={course} />
 
                     })
                 }

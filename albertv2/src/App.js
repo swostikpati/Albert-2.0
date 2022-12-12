@@ -25,7 +25,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<Home />} ></Route>
+        <Route path="/" element={<Home backendData={BackendData} />} ></Route>
         <Route path="/academics" element={<Academics />}></Route>
         <Route path="/finances" element={<Finances />}></Route>
         <Route path="/resources" element={<Resources />}></Route>
