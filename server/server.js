@@ -41,7 +41,7 @@ function selectData() {
         .then((snapshot) => {
             if (snapshot.exists()) {
                 semesterData = snapshot.val();
-                console.log(snapshot.val());
+                // console.log(snapshot.val());
             }
             else {
                 console.log("No Data Found");
