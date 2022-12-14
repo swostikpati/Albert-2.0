@@ -1,6 +1,7 @@
 import styles from "./CourseCard.module.css"
 
 function CourseCard(props) {
+    // Coruse card to be viewed in the semester enrolled courses of the student
     return (
         <div className={styles.main}>
             <div>{props.course.courseName}</div>

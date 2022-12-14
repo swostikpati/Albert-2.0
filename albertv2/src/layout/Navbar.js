@@ -5,10 +5,9 @@ import user_icon from "../assets/user_icon.png";
 //styles (can be any name) is a JS object where everything that we define in CSS will be properties
 
 function Navbar() {
-
+    // Navbar with links one one side and profile icon on the other
     return (
         <header className={styles.header} id={styles["#heading1"]}>
-            {/* <div>Logo</div> */}
             <div>
                 <nav>
                     <ul className={styles.nav_links}>

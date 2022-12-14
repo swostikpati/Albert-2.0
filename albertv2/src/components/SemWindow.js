@@ -3,6 +3,7 @@ import CourseCard from "./CourseCard";
 import { studentSemesterData } from "../helpers/studentSemesterData.js";
 
 function SemWindow(props) {
+    // button on click handlers to move between views
     function backButtonHandler() {
         props.showSemesters();
     }
@@ -10,6 +11,8 @@ function SemWindow(props) {
     function enrollButtonHandler() {
         props.enrollNow(props.name, props.num);
     }
+
+    // renders the courses enrolled in a specifc semester and gives users the enroll into the courses in that semester
     return (
         <div className={styles.main}>
 

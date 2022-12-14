@@ -2,6 +2,7 @@ import styles from "./CoursesBlock.module.css";
 import { useState } from "react";
 
 function CoursesBlock(props) {
+    // State variables to check whether the course is added to card or not
     const [toggleAddToCart, setToggleAddToCart] = useState(true);
 
     function toggleAddToCartHandler() {
@@ -13,6 +14,7 @@ function CoursesBlock(props) {
         }
     }
 
+    // Displaying all the information about courses that are available in the course enrollment page
     return (
         <div className={styles.main}>
             <p><strong>{props.course.courseCode}: {props.course.courseName}</strong></p>

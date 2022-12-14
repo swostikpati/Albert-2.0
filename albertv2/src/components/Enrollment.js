@@ -5,11 +5,12 @@ import { useState } from "react";
 import SemWindow from "./SemWindow";
 
 function Enrollment(props) {
+    // state variables to check which view needs to be displayed
     const [semDisp, setSemDisp] = useState(true);
     const [semName, setSemName] = useState({});
     const [semNum, setSemNum] = useState({});
 
-
+    // functions that will be sent as props to shift between views
     function selectSemester(name, num) {
         console.log("Yes it works")
         setSemDisp(false);
@@ -19,6 +20,8 @@ function Enrollment(props) {
     function showSemesters() {
         setSemDisp(true);
     }
+
+    // The container where course enrollment is reached
     if (semDisp) {
         return (<div className={styles.main}>
             <div>

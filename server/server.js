@@ -1,3 +1,4 @@
+// initiating server.js as a module
 import { createRequire } from "module";
 // import fetch from 'node-fetch'
 const require = createRequire(import.meta.url);
@@ -13,6 +14,8 @@ const filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(filename);
 
 app.use(express.json());
+
+// Setting up Firebase
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -35,11 +38,13 @@ const firebaseApp = initializeApp(firebaseConfig);
 
 import { getDatabase, ref, set, child, update, remove, get } from "firebase/database"
 
+// Initialize the realtime database
 const db = getDatabase(firebaseApp);
 
 
 let semesterData;
 
+// Function to select specific data from the database
 function selectData() {
     const dbref = ref(db);
 
@@ -58,7 +63,7 @@ function selectData() {
 }
 
 
-// semesterData[0].Courses.ClassSize = 22
+// Function to update specifc data
 function updateData() {
     update(ref(db, "semesters/0/Courses/0/"), { classSize: 100 })
         .then(() => {
@@ -70,22 +75,17 @@ function updateData() {
 
 // updateData();
 
+// The following line renders the entire React App in the same port as the server
 app.use(express.static(path.join(__dirname + "/public")));
 
 
-
+// sending data to the Client-side 
 app.get("/api/semesters", (req, res) => {
-
-    // fetch("https://albertv2test-default-rtdb.firebaseio.com/semesters.json")
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         console.log(data);
-    //         res.json(data);
-    //     })
-    //     .catch(e => console.log("Giving error"))
     selectData();
     res.json(semesterData);
 })
 
-// app.use(express.static("/public"));
+// server runs on port 5000 while the client was initially running at port 3000
+// After a build of the React App was stored in the server-side public folder and served, there is no longer the need to run two servers. 
+// Everything happens on localhost:5000 now
 app.listen(5000, () => console.log("listening on port 5000"));

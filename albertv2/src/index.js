@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom"; //to use routing - BrowserRout
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  // Rendering the React App wrapped with BrowserRouter
   <BrowserRouter><App /></BrowserRouter>
 );
 

@@ -11,8 +11,10 @@ import { useEffect, useState } from "react";
 
 
 function App() {
+  // Declaring state variables
   const [BackendData, setBackendData] = useState([{}])
 
+  // Fetching backend data from localhost:5000 - relayed through proxy
   useEffect(() => {
     fetch("/api/semesters")
       .then(res => res.json())
@@ -22,6 +24,8 @@ function App() {
         }
       )
   }, []);
+
+  // Returning the Layout Component with specific route declaration
   return (
     <Layout>
       <Routes>

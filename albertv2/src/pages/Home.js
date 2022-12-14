@@ -10,10 +10,12 @@ import EnrollmentWindow from "../components/EnrollmentWindow";
 
 
 function Home(props) {
+    // Declaring state variables
     const [enroll, setEnroll] = useState(false);
     const [semName, setSemName] = useState({});
     const [semNum, setSemNum] = useState({});
 
+    // Declaring functions to be passed as props for shifting between views
     function enrollNow(name, num) {
         setEnroll(true);
         setSemName(name);
@@ -28,6 +30,8 @@ function Home(props) {
     function checkOut() {
         setEnroll(false);
     }
+
+    // Returning the home page
 
     if (!enroll) {
         return (
@@ -50,7 +54,6 @@ function Home(props) {
         return (
             <div> <h1 className={styles.heading}>Albert Home</h1>
                 <section className={styles.main}>
-                    {/* <div>{semName} Enrollment</div> */}
                     <EnrollmentWindow name={semName} num={semNum} stopEnroll={stopEnroll} checkOut={checkOut} backendData={props.backendData} />
                 </section>
             </div>

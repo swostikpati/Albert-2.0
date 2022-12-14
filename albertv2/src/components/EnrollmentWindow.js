@@ -2,6 +2,8 @@ import CoursesBlock from "./CoursesBlock";
 import styles from "./EnrollmentWindow.module.css";
 
 function EnrollmentWindow(props) {
+
+    // Button click handlers
     function backButtonHandler() {
         props.stopEnroll();
     }
@@ -10,7 +12,8 @@ function EnrollmentWindow(props) {
         alert("The Enrollment functionality is under progress. It will be added soon!")
         props.checkOut()
     }
-    console.log(props.backendData);
+
+    // Renders the view of the actual enrollment window
     return (
         <div className={styles.main}>
             <h1>

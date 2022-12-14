@@ -3,6 +3,7 @@ import { forYouPageData } from "../helpers/forYouPageData.js";
 
 
 function Fyp() {
+    // returns the For You Page with all the data
     return (
         <div className={styles.main}>
             {

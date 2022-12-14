@@ -4,6 +4,7 @@ import styles from "./ImageSlider.module.css";
 
 
 function ImageSlider(props) {
+    // state variable to control which announcement is being viewed
     const [currentI, setCurrentI] = useState(0);
     setInterval(() => {
         if (currentI < props.arr.length - 1) {
@@ -14,6 +15,7 @@ function ImageSlider(props) {
         }
     }, 10000)
 
+    // returns a image carousel with all the announcements
     return (
         <div className={styles.main}>
             <div className={styles.bgImg} style={{ backgroundImage: `url(${props.arr[currentI].imageURL})` }}></div>
