@@ -31,16 +31,130 @@ This is the [wireframe](https://github.com/swostikpati/Albert-2.0/blob/main/Wire
 The most important part of building this project was to really focus a lot on the simple UI and UX aspects. Given below are some of the key highlights that were implemented and the process and thinking associated with them.
 
 #### • Horizontal navbar
-The existing navbar in the screen was an awkward vertical navbar attached to a container instead of the screen as whole. I decided on changing it to a smooth horizontal navbar combining redundant screens (like the Academics tab and grades tab), which made the website instantly look much more modern.
+The existing navbar in the screen was an awkward vertical navbar attached to a container instead of the screen as whole. I decided on changing it to a smooth horizontal navbar combining redundant screens (like the Academics tab and grades tab), which made the website instantly look much more modern. 
 
-#### • Announcements bar
-The current home page began with a huge announcements pane, taking up almost half of the screen pushing more relvant and personalized information to the bottom of the screen. I initially thought of completely removing the announcements pane, but there might be some important information that the university would want to convey to its students. Therefore I put it up as a small card in the side of the screen.
+The code for the custom Navbar component is given below:
+
+Navbar.js
+```
+<header className={styles.header} id={styles["#heading1"]}>
+    <div>
+        <nav>
+            <ul className={styles.nav_links}>
+                <li>
+                    <img className={styles.logo} src={logo} alt="logo"></img>
+                </li>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+                <li>
+                    <Link to="/academics">Academics</Link>
+                </li>
+                <li>
+                    <Link to="/finances">Finances</Link>
+                </li>
+                <li>
+                    <Link to="/resources">Resources</Link>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div><img className={styles.user_icon} src={user_icon} alt="user"></img></div>
+
+</header >
+```
+
+#### • Announcements Pane
+The current home page began with a huge announcements pane, taking up almost half of the screen pushing more relvant and personalized information to the bottom of the screen. I initially thought of completely removing the announcements pane, but there might be some important information that the university would want to convey to its students. Therefore I put it up as a small card in the side of the screen. 
+
+The announcements pane contained of a imageSlider component wrapped inside the card component. The code for the Announcements pane is given below:
+
+ImageSlider.js
+```
+import { useState } from "react";
+import styles from "./ImageSlider.module.css";
+// import { announcementArr } from "../helpers/announcementData.js";
+
+
+function ImageSlider(props) {
+    // state variable to control which announcement is being viewed
+    const [currentI, setCurrentI] = useState(0);
+    setInterval(() => {
+        if (currentI < props.arr.length - 1) {
+            setCurrentI(currentI + 1);
+        }
+        else {
+            setCurrentI(0);
+        }
+    }, 10000)
+
+    // returns a image carousel with all the announcements
+    return (
+        <div className={styles.main}>
+            <div className={styles.bgImg} style={{ backgroundImage: `url(${props.arr[currentI].imageURL})` }}></div>
+        </div>
+    )
+}
+
+export default ImageSlider;
+```
 
 #### • For You Page 
 This is one of the big features that I planned on introducing. There is just way too much information in Albert to keep track of at all times. In such a scenario, important information tends to get buried which sometimes can have very big consequences to the individual. This causes a lot of anxiety on the students part which leads them to continuously having to monitor different parts of Albert or risk missing something important. The question might come up that why aren't these things communicated through the announcements tab. The reason for this is the fact that sometimes announcements tend to be very generalized and their scope cannot cover specific things important to specific individuals. Therefore there was a strong need for a place to update these specific announcements. This is why I thought of creating a For You Page type card in the Home Page where all these information will be displayed. The information spans extends everything from updates to courses in the enrollement cart, changes in waitlists, grades being updated. fianance holds, etc. 
 
+The For You Page consisted of a card which wrapped divs consisting of the FYP data around. The code is given below.
+
+Fyp.js
+```
+import styles from "./Fyp.module.css";
+import { forYouPageData } from "../helpers/forYouPageData.js";
+
+
+function Fyp() {
+    // returns the For You Page with all the data
+    return (
+        <div className={styles.main}>
+            {
+                forYouPageData.map((alert) => {
+                    return <div id={alert.id}>{alert.text}</div>
+                })
+            }
+        </div>
+    )
+}
+
+export default Fyp;
+```
+
 #### • Semester segregation 
-The current website has this weird way of always opening in the latest semester registered window. Even though this might feel as something logical to do, but if we think about it, the latest semester that we registered has usually not even begun and we are still in the previous semesters. This always leads to absolutely useless clicks in the users part and sometimes when the user is looking for courses, they end up looking in the wrong semester. Segregating semesters into individual semester cards helps a lot in preventing this. This way the user chooses which semester they want to enter into and see the courses for (both enrolled and to be enrolled ones)
+The current website has this weird way of always opening in the latest semester registered window. Even though this might feel as something logical to do, but if we think about it, the latest semester that we registered has usually not even begun and we are still in the previous semesters. This always leads to absolutely useless clicks in the users part and sometimes when the user is looking for courses, they end up looking in the wrong semester. Segregating semesters into individual semester cards helps a lot in preventing this. This way the user chooses which semester they want to enter into and see the courses for (both enrolled and to be enrolled ones).
+
+The code for each of the semester cards is given below:
+
+Semester.js
+```
+import styles from "./Semester.module.css";
+
+function Semester(props) {
+
+    // function to control which semester is being selected 
+    function semesterDisplayHandler() {
+        console.log(`${props.name} clicked!`);
+        props.selectSemester(props.name, props.num);
+    }
+
+    // renders the semester cards for each semester in the home screen
+    return (
+        <div className={styles.main} style={{ backgroundImage: `url(${props.url})` }} onClick={semesterDisplayHandler}>
+            <div className={styles.text}>
+                {props.name}
+            </div>
+        </div>
+    )
+}
+
+export default Semester;
+```
 
 #### • Pre-requisites fullfilled indication 
 A very complicated step in course registration is to validate the courses that are present in the cart. Even though it is a very required step, I don't think the fact that whether someone has fulfilled the pre-reqs of a course or not also be determined in this step. Why should the user put something inside their cart to find out they aren't eligible to take the course. If we were able to indicate this before, it would reduce the time the user spends uselessly. More often than not, the pre-reqs of the courses that are listed in the description section are not exhaustive. To make this process more smoother, I added a indicator which shows whether the users course history fullfills the courses required to take the course or not. 
