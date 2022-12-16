@@ -227,7 +227,26 @@ Once the previous improvments are finished to the Home Page, we can next move on
 
 ## User Testing
 
-There was extensive user-testing that was conducted both during building the application and after that. Over 12 people tested during the play-testing phase who provided me with a lot of constructive feedback. The website was finally presented to and tested by _ . These are some pictures from the final presentation.
+There was extensive user-testing that was conducted both during building the application and after that. Over 12 people tested during the play-testing phase who provided me with a lot of constructive feedback. The website was finally presented to and tested by [Ruta kruliauskaite](https://rutakru.com/). These are some feedback I received from the final presentation:
+
+"The vacancies are so mysterious on Albert so this would be so helpful"
+
+"Especially since we get time slots for course enrollment, knowing how many vacancies there are would help when looking for a plan B"
+
+"I love how you took into consideration the main elements in Albert that need changing and changing them in a way that will help students."
+
+"really nice interface and albert should have the vacancies information. I need it :)"
+
+"This would be very helpful to check the vacancies and stay updated"
+
+"I think you should send these ideas to NYU IT team"
+
+"vacancies is a very thoughtful feature! I like how u merged modern design with existing design features in albert"
+
+"A cool feature would be subscribing to classes to get email reminders!"
+
+"I would love if the website also shows which courses in New York can be counted as course in NYUAD"
+
 
 ## References
 
