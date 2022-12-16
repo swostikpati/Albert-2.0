@@ -76,16 +76,22 @@ Later, the build of the entire React application was put up in a public folder i
 ## Key Challenges and Solutions
 
 #### • Learning and Implementing React 
-Learning and understanding the basic concepts in React was a really difficult task. React is a fast updating framework, so almost 90% of the resources I referred to were already obsolete even if they were just a few months old. Many of the functions and tags used in those resources had already deprecated. This way it began even more difficult to learn thhe framework with understanding enough to implement the website I had proposed. It was a slow learning phase where I felt like re-learning frontend development all over again, but in the end I finally got a good enough understanding of the basic concepts. I even delved further into learning advanced stuff like hooks, props, and states and experimented around with them to learn how to display different pieces of information.
+Learning and understanding the basic concepts in React was a really difficult task. React is a fast updating framework, so almost 90% of the resources I referred to were already obsolete even if they were just a few months old. Many of the functions and tags used in those resources had already deprecated. This way it began even more difficult to learn thhe framework with understanding enough to implement the website I had proposed. It was a slow learning phase where I felt like re-learning frontend development all over again. Designing and manipulating simple elements took in a lot more time than usual. But in the end I finally got a good enough understanding of the basic concepts. I even delved further into learning advanced stuff like hooks, props, and states and experimented around with them to learn how to display different pieces of information.
 
 #### • Deliberating on UI/UX issues and possible solutions
 The application wasn't just meant to be a tech overhaul of NYU Albert. As much as it was necessary to give it a more smoother feel, it was also as important to focus on the UI and UX elements of it. This led to me to deliberate and understand every UI decision I made for the sake of the overall improvement of the application. I tried out several different things in every page and every user flow, and finally decided on the one that looked the most aestheic while still meeting up the expectations of user experience.
 
 #### • Integrating Frontend and Backend
 
-#### • Finding out the specifc problem to solve and suggesting impactful solutions
+The next challenge in the list was after learning to work with the frontend and the backend separately, it was the integration part. I had never before worked with Node-Express and React together. Implementing the React server to receive requests from the backend server through API requests after the backend pulled data from the realtime Firebase databse was a really complicated process. After going through a number of resources, learning about proxy servers, and understanding how the different elements coudl work together, I was finally able to integrate the frontend and the backend to work together.
 
-#### • Working with Firebase Realtime Database locally
+#### • Finding out the specifc problem to solve in the existing website and suggesting impactful solutions
+
+The research work before starting to build the wireframe and the application as a whole was a difficult process. First, I had to go through every existing element and see what worked and what really didn't work. After getting this overall view, I started reaching out to people through surveys and 1:1 interactions to understand their views about the current version. Taking in my learnings, it took in a lot of iterations to finally have a rough idea of the specific problems that needed to be solved.
+
+#### • Accessing the Firebase Realtime database
+
+The code that was provided by in the Firebase website for initializing the database dealt with the server.js file as a module. This took away a lot of functionalities that the file initially had and I had to import everything starting from the very "require" statement. It caused a lot of problems to access functions that were existing before and I had to look through lots of troubleshoot guides to implement simple things.
 
 ## Potential Next Steps
 
