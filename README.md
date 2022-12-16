@@ -44,7 +44,12 @@ The most important part of building this project was to really focus a lot on th
 
 #### • Multiple courses selection option - 
 
+#### • Small UI elements - 
+mention scrollbar and color choice to make it subtly NYU ish
+
 ## Technical Design
+
+The application was designed using a very modern Tech Stack. The client-side was managed using React JS while the server-side ran on a Node-Express server. I used the Firebase realtime-database to store data about students and courses.
 
 ### React JS - Client Side Library
 
@@ -52,10 +57,31 @@ The most important part of building this project was to really focus a lot on th
 
 ## Key Challenges and Solutions
 
+#### • Learning and Implementing React 
+mention about tech that keeps changing
+
+#### • Deliberating on UI/UX issues and possible solutions
+
+#### • Integrating Frontend and Backend
+
+#### • Finding out the specifc problem to solve and suggesting impactful solutions
+
+#### • Working with Firebase Realtime Database locally
+
 ## Potential Next Steps
+
+There is no limit of improving NYU Albert further. There were so many places where I spotted possible improvements during the process of research which I conducted before starting out with my project. These are some of the very recent next steps that can be taken to improve my existing project:
+
+#### • Implementing the registration system using Sockets
+
+#### • Implementing more backend logic for the For You Page
+
+#### • Creating an Admin profile
+
+#### • Implementing other pages
 
 ## User Testing
 
-## Exhibitions
+There was extensive user-testing that was conducted both during building the application and after that. Over 12 people tested during the play-testing phase who provided me with a lot of constructive feedback. The website was finally presented to and tested by _ . These are some pictures from the final presentation.
 
 ## References
