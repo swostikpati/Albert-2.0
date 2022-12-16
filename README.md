@@ -227,7 +227,7 @@ Once the previous improvments are finished to the Home Page, we can next move on
 
 ## User Testing
 
-There was extensive user-testing that was conducted both during building the application and after that. Over 12 people tested during the play-testing phase who provided me with a lot of constructive feedback. The website was finally presented to and tested by [Ruta kruliauskaite](https://rutakru.com/). These are some feedback I received from the final presentation:
+There was extensive user-testing that was conducted both during building the application and after that. Over 12 people tested during the play-testing phase who provided me with a lot of constructive feedback. The website was finally presented to the entire class and tested by guest speaker [Ruta kruliauskaite](https://rutakru.com/). These are some feedback I received from the final presentation:
 
 "The vacancies are so mysterious on Albert so this would be so helpful"
 
