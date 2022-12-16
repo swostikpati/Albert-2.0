@@ -30,19 +30,19 @@ This is the [wireframe](https://github.com/swostikpati/Albert-2.0/blob/main/Wire
 
 The most important part of building this project was to really focus a lot on the simple UI and UX aspects. Given below are some of the key highlights that were implemented and the process and thinking associated with them.
 
-• Horizontal navbar - 
+#### • Horizontal navbar - 
 
-• Announcements bar - 
+#### • Announcements bar - 
 
-• For You Page - 
+#### • For You Page - 
 
-• Semester segregation - 
+#### • Semester segregation - 
 
-• Pre-requisites fullfilled indication - 
+#### • Pre-requisites fullfilled indication - 
 
-• Number of students enrolled indication - 
+#### • Number of students enrolled indication - 
 
-• Multiple courses selection option - 
+#### • Multiple courses selection option - 
 
 ## Technical Design
 
