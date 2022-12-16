@@ -22,7 +22,7 @@ NYU Albert is a huge website with a lot of applications and loads of user data. 
 
 ### Wireframing
 
-This is the [wireframe]() of the website.
+This is the [wireframe](https://github.com/swostikpati/Albert-2.0/blob/main/Wireframe.png) of the website.
 
 ## Creative Design
 
