@@ -228,3 +228,11 @@ Once the previous improvments are finished to the Home Page, we can next move on
 There was extensive user-testing that was conducted both during building the application and after that. Over 12 people tested during the play-testing phase who provided me with a lot of constructive feedback. The website was finally presented to and tested by _ . These are some pictures from the final presentation.
 
 ## References
+
+### • [React JS]()
+
+### • [Node JS]()
+
+### • [Firebase]()
+
+### • [Express JS]()
