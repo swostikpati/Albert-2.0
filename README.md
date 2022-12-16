@@ -80,12 +80,16 @@ mention about tech that keeps changing
 There is no limit of improving NYU Albert further. There were so many places where I spotted possible improvements during the process of research which I conducted before starting out with my project. These are some of the very recent next steps that can be taken to improve my existing project:
 
 #### • Implementing the registration system using Sockets
+My project takes us up until the part of the registration covering the entire process except the part where the person finds themselves enrolled in a course. I thought of implementing it with simple GET and POST requests but then I believed that using Sockets for the purpose would be a much better idea. Adding an extra element of Sockets was very difficult given the scope of the project in the limited timeframe and already heavy tech stack. So the very next improvement that can be made is implement this part using rockets to finally finish a very robust registraion process.
 
 #### • Implementing more backend logic for the For You Page
+A lot of the ideas in the project are implemented just in the front-end to help us understand how they would work. Additional backend logic can be added to various components like the For You Page, the pre-req and number of students indicator, etc. to automate several processes.
 
-#### • Creating an Admin profile
+#### • Creating an Admin profile secured with user authentication (Bcrypt)
+Once sockets are implemented for the enrollment process, we can also create additional namespaces for the website where we have an admin namespace to give access to the university registrar to deal with several backend processes. This namespace would be further secured using user authentication using Bcrypt.
 
 #### • Implementing other pages
+Once the previous improvments are finished to the Home Page, we can next move on to the other pages. There are several elements in each of these prages that can be developed a lot and the way of information flow and fisplay can be drastically improved.
 
 ## User Testing
 
