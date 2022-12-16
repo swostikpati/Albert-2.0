@@ -60,14 +60,26 @@ The application was designed using a very modern Tech Stack. The client-side was
 
 ### React JS - Client Side Library
 
+For the purpose of the project we had to use a client-side JS library. I felt React JS would be a good choice considering the fact that it has a lot of reusuable components and also gives the power of creating extremely reactive web-pages rendering vast amounts of content in real-time. Therefore I created a simple react-app using npx and then proceeded to create the application's frontend using React. 
+
+The entire application is rendered in a an app which is wrapped about by a browserRouter to listen for routes in the Navbar. Each page is put into a specific folder called pages. The layout of the website a whole is stored inside Layout.js inside the layout folder. The various components rendered throughout the various screens are placed inside a folder components and the assets and helper arrays are stored are stored in the corresponding directories. Each component is styled separately using CSS modules.This organization helps both in increasing code modularity and plus provides us with custom made reusable components throughout the website. 
+
 ### Firebase - Realtime Database
+
+The Firebase Realtime Database was used to store the database of courses and the schema is designed in such a way that it can easily be expanded to include student data in the future. Firebase offers a really powerful and robust database and works well with the other technologies used in my project. 
+
+Initially, the backend Node-Express based server deals with selecting and updating data from the realtime database (which works both online and offline), and sends the data as an API request to the React server. The React server fetches this data. 
+
+Later, the build of the entire React application was put up in a public folder insider the server directory and the folder was served entirely to the backend server. This way I was able to render the entire webpage in the backend server eliminating the need two simulatenously running servers.
+
 
 ## Key Challenges and Solutions
 
 #### • Learning and Implementing React 
-mention about tech that keeps changing
+Learning and understanding the basic concepts in React was a really difficult task. React is a fast updating framework, so almost 90% of the resources I referred to were already obsolete even if they were just a few months old. Many of the functions and tags used in those resources had already deprecated. This way it began even more difficult to learn thhe framework with understanding enough to implement the website I had proposed. It was a slow learning phase where I felt like re-learning frontend development all over again, but in the end I finally got a good enough understanding of the basic concepts. I even delved further into learning advanced stuff like hooks, props, and states and experimented around with them to learn how to display different pieces of information.
 
 #### • Deliberating on UI/UX issues and possible solutions
+The application wasn't just meant to be a tech overhaul of NYU Albert. As much as it was necessary to give it a more smoother feel, it was also as important to focus on the UI and UX elements of it. This led to me to deliberate and understand every UI decision I made for the sake of the overall improvement of the application. I tried out several different things in every page and every user flow, and finally decided on the one that looked the most aestheic while still meeting up the expectations of user experience.
 
 #### • Integrating Frontend and Backend
 
