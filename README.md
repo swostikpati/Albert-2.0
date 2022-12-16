@@ -4,7 +4,9 @@
 
 New York University has a widely known student information website known as NYU Albert (named after its founder Albert Gallatin). The website is critical to several administrative functions including admissions, course enrollment, etc. and is linked to the database storing the information of every person affliated to the institution. My project was an attempt at creating a revamped version of the website, with modern UI designs, an easier user flow, etc. to enhance the overall user experience.
 
-/video
+
+https://user-images.githubusercontent.com/67205637/208161296-225994f4-df0c-461d-85d8-da7c92bf797a.mp4
+
 
 ### Overview
 
@@ -229,10 +231,10 @@ There was extensive user-testing that was conducted both during building the app
 
 ## References
 
-### • [React JS]()
+### • [React JS](https://reactjs.org/)
 
-### • [Node JS]()
+### • [Node JS](https://nodejs.org/en/)
 
-### • [Firebase]()
+### • [Firebase](https://firebase.google.com/)
 
-### • [Express JS]()
+### • [Express JS](https://expressjs.com/)
