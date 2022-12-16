@@ -30,7 +30,7 @@ This is the [wireframe](https://github.com/swostikpati/Albert-2.0/blob/main/Wire
 
 The most important part of building this project was to really focus a lot on the simple UI and UX aspects. Given below are some of the key highlights that were implemented and the process and thinking associated with them.
 
-#### • Horizontal navbar - 
+#### • Horizontal navbar - The existing navbar in the screen was an awkward vertical navbar attached to a container instead of the screen as whole. I decided on changing it to a smooth horizontal navbar combining redundant screens (like the Academics tab and grades tab), which made the website instantly look much more modern.
 
 #### • Announcements bar - 
 
